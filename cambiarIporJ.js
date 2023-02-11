@@ -15,7 +15,7 @@ readline.question('Digite NUMERO Pos-I Pos-J\nEjemplo:\n172528 2 4\n',
   const i = valores[1]
   const j = valores[2]
   const digitoI = parseInt(n / Math.pow(10, lon - i)) % 10
-  const digitoJ = parseInt(n / Math.pow(10, lon -j)) % 10
+  const digitoJ = parseInt(n / Math.pow(10, lon - j)) % 10
   
   console.log(digitoI, digitoJ)
   readline.close()
