@@ -7,10 +7,12 @@ const readline = require('readline').createInterface({
 })
 
 
-const n = readline.question('Digite NUMERO DIGITO-I DIGITO-J\nEJ:\n172528 2 4', 
+readline.question('Digite NUMERO DIGITO-I DIGITO-J\nEJ:\n172528 2 4\n', 
 (inp)=> {
-  console.log(inp.split(' '))
+  let valores = inp.split(' ').map(x => parseInt(x))
+  const lon = parseInt(Math.log10(valores[0])+1)
+  
   readline.close()
 })
 
-console.log(n)
+
