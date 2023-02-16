@@ -11,10 +11,13 @@ const readline = require('readline').createInterface({
 })
 
 readline.question('Ingrese N: ', (n) => {
-  if(!isNaN(n)){
+  if(isNaN(n)){ // No es número
     console.log('ERROR: ingrese un número válido...');
     process.exit(1)
   }
   n = Number(n)
-  
+  for(let i = 1; i<=n;i++){
+    console.log('#'.repeat(i))
+  }
+  process.exit(0)
 })
