@@ -1,15 +1,14 @@
 /*
-Dado un número N crea los N escalones de una grada con  el símbolo '#'
-N = 3
-#
-##
-###
+  Dado un número N crea los N escalones de una grada con  el símbolo '#'
+  N = 3
+  #
+  ##
+  ###
 */
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
 })
-
 readline.question('Ingrese N: ', (n) => {
   if(isNaN(n)){ // No es número
     console.log('ERROR: ingrese un número válido...');
