@@ -23,6 +23,7 @@ readline.question('Digite NUMERO Pos-I Pos-J\nEjemplo:\n172528 2 4\n',
     console.log(`Original:\t ${n}`)
     console.log(`Cambiado:\t ${nuevo}`)
     readline.close()
+    // cerramos la entrada de teclado
   })
 
 
