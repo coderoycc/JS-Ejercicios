@@ -16,7 +16,7 @@ $(document).ready(() =>{
       paginas = Math.ceil(cantidad / maximo);
       let html = '';
       for (let i = 1; i <= paginas; i++) {
-        html += `<li class="page-item" onclick="getActualPage(${i})"><a class="page-link" href="#">${i}</a></li>`;
+        html += `<li class="page-item" onclick="getActualPage(${i})" id="pg${i}"><a class="page-link" href="#" >${i}</a></li>`;
       }
       html += `
       <li class="page-item" onclick="getNextPage()">
@@ -39,6 +39,8 @@ $(document).ready(() =>{
 })
 
 function mostrar(){
+  $(".page-item").removeClass('active');
+  $("#pg" + pagActual).addClass('active');
   let html = '';
   let inicio = (pagActual - 1) * 2;
   let final = inicio + 2;
